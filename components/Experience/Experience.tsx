@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Heading } from "../ui/Text";
-import { FaBriefcase, FaBuilding, FaLaptopCode } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa";
 
 const experiences = [
     {
@@ -83,7 +83,10 @@ const experiences = [
 
 export default function Experience() {
     return (
-        <section id="experience" className="w-full flex justify-center items-center py-20 px-4 bg-[#232532] border-t border-[#232532]/60">
+        <section
+            id="experience"
+            className="w-full flex justify-center items-center py-20 px-4 bg-[#232532] border-t border-[#232532]/60"
+        >
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -91,9 +94,14 @@ export default function Experience() {
                 transition={{ duration: 0.8 }}
                 className="w-full max-w-5xl flex flex-col items-center gap-10"
             >
-                <Heading className="text-white text-3xl md:text-4xl font-bold mb-2">Experience</Heading>
+                <Heading className="text-white text-3xl md:text-4xl font-bold mb-2">
+                    Experience
+                </Heading>
                 <div className="relative w-full flex flex-col items-center">
-                    <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-sky-700/40 to-fuchsia-700/20 rounded-full z-0" style={{ minHeight: '100%' }} />
+                    <div
+                        className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-sky-700/40 to-fuchsia-700/20 rounded-full z-0"
+                        style={{ minHeight: "100%" }}
+                    />
                     <div className="flex flex-col gap-12 w-full z-10">
                         {experiences.map((exp, idx) => (
                             <motion.div
@@ -103,7 +111,7 @@ export default function Experience() {
                                 viewport={{ once: true, amount: 0.3 }}
                                 transition={{ duration: 0.7, delay: idx * 0.1 }}
                                 className="relative flex flex-col md:flex-row gap-6 bg-gradient-to-br from-slate-800/60 to-slate-900/30 border border-slate-700/40 rounded-2xl p-6 shadow-lg group hover:shadow-sky-400/20 transition-shadow"
-                                style={{ marginLeft: '2.5rem' }}
+                                style={{ marginLeft: "2.5rem" }}
                             >
                                 <div className="absolute -left-12 top-8 md:top-10 w-8 h-8 flex items-center justify-center">
                                     <span className="w-5 h-5 rounded-full bg-gradient-to-br from-sky-400 to-fuchsia-400 border-4 border-[#232532] shadow-lg block group-hover:scale-110 transition-transform" />
@@ -117,7 +125,9 @@ export default function Experience() {
                                     <div className="text-xs text-slate-400">{exp.period}</div>
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2">
-                                    <div className="font-semibold text-slate-100 mb-1 text-lg">{exp.role}</div>
+                                    <div className="font-semibold text-slate-100 mb-1 text-lg">
+                                        {exp.role}
+                                    </div>
                                     <ul className="list-disc list-inside text-slate-300 text-sm mb-2 pl-2">
                                         {exp.description.map((desc, i) => (
                                             <li key={i}>{desc}</li>
@@ -125,7 +135,10 @@ export default function Experience() {
                                     </ul>
                                     <div className="flex flex-wrap gap-2 mt-2">
                                         {exp.skills.map((skill) => (
-                                            <span key={skill} className="bg-sky-700/20 text-sky-300 px-3 py-1 rounded-full text-xs font-medium">
+                                            <span
+                                                key={skill}
+                                                className="bg-sky-700/20 text-sky-300 px-3 py-1 rounded-full text-xs font-medium"
+                                            >
                                                 {skill}
                                             </span>
                                         ))}

@@ -65,8 +65,7 @@ const projects = [
     {
         title: "Techtalent - AKASIA.ID",
         period: "Jan 2024 - Feb 2024",
-        description:
-            "Web platform for customizing CVs and streamlining job recruitment.",
+        description: "Web platform for customizing CVs and streamlining job recruitment.",
         highlights: [
             "Built admin panel, backend with Laravel & MySQL, frontend with React.js.",
             "Deployed on CentOS, enhanced interactivity with React.js.",
@@ -79,11 +78,8 @@ const projects = [
     {
         title: "ALAMI Sharia P2P - Mobile APP",
         period: "Des 2019 - Sep 2023",
-        description:
-            "Mobile app for Sharia-compliant peer-to-peer financing (Hijra).",
-        highlights: [
-            "Built with React Native, Redux.js, backend with Hibernate & PostgreSQL.",
-        ],
+        description: "Mobile app for Sharia-compliant peer-to-peer financing (Hijra).",
+        highlights: ["Built with React Native, Redux.js, backend with Hibernate & PostgreSQL."],
         skills: ["React Native", "Redux.js", "Hibernate", "PostgreSQL"],
         image: "/portfolio/alami.png",
         link: null,
@@ -93,7 +89,10 @@ const projects = [
 
 export default function Portfolio() {
     return (
-        <section id="portfolio" className="w-full flex justify-center items-center py-20 px-4 bg-[#232532] border-t border-[#232532]/60">
+        <section
+            id="portfolio"
+            className="w-full flex justify-center items-center py-20 px-4 bg-[#232532] border-t border-[#232532]/60"
+        >
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +100,9 @@ export default function Portfolio() {
                 transition={{ duration: 0.6 }}
                 className="w-full max-w-5xl flex flex-col items-center gap-10"
             >
-                <Heading className="text-white text-3xl md:text-4xl font-bold mb-2">Portfolio</Heading>
+                <Heading className="text-white text-3xl md:text-4xl font-bold mb-2">
+                    Portfolio
+                </Heading>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                     {projects.map((proj, idx) => (
                         <motion.div
@@ -125,18 +126,30 @@ export default function Portfolio() {
                                 <div className="flex items-center gap-2 text-sky-400 font-bold text-lg">
                                     {proj.title}
                                     {proj.link && (
-                                        <a href={proj.link} target="_blank" rel="noopener noreferrer" className="ml-1 text-sky-400 hover:text-sky-300">
+                                        <a
+                                            href={proj.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="ml-1 text-sky-400 hover:text-sky-300"
+                                        >
                                             <FaExternalLinkAlt />
                                         </a>
                                     )}
                                     {proj.github && (
-                                        <a href={proj.github} target="_blank" rel="noopener noreferrer" className="ml-1 text-slate-400 hover:text-slate-200">
+                                        <a
+                                            href={proj.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="ml-1 text-slate-400 hover:text-slate-200"
+                                        >
                                             <FaGithub />
                                         </a>
                                     )}
                                 </div>
                                 <div className="text-xs text-slate-400 mb-1">{proj.period}</div>
-                                <div className="text-slate-200 text-sm mb-2">{proj.description}</div>
+                                <div className="text-slate-200 text-sm mb-2">
+                                    {proj.description}
+                                </div>
                                 <ul className="list-disc list-inside text-slate-300 text-xs mb-2 pl-2">
                                     {proj.highlights.map((desc, i) => (
                                         <li key={i}>{desc}</li>
@@ -144,7 +157,10 @@ export default function Portfolio() {
                                 </ul>
                                 <div className="flex flex-wrap gap-2 mt-2">
                                     {proj.skills.map((skill) => (
-                                        <span key={skill} className="bg-sky-700/20 text-sky-300 px-3 py-1 rounded-full text-xs font-medium">
+                                        <span
+                                            key={skill}
+                                            className="bg-sky-700/20 text-sky-300 px-3 py-1 rounded-full text-xs font-medium"
+                                        >
                                             {skill}
                                         </span>
                                     ))}

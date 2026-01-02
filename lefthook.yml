@@ -11,12 +11,12 @@
 #         - security
 
 pre-commit:
-  parallel: true
-  commands:
-    lint:
-      run: npx eslint {staged_files}
-      glob: "*.{js,jsx,ts,tsx}"
-    prettier:
-      run: npx prettier --write {staged_files}
-      glob: "*.{js,jsx,ts,tsx,json,css,md}"
+    parallel: true
+    commands:
+        lint:
+            run: npx eslint {staged_files}
+            glob: "*.{js,jsx,ts,tsx}"
+        prettier:
+            run: npx prettier --write .
+            glob: "*.{js,jsx,ts,tsx,json,css,md}"
 #   jobs:

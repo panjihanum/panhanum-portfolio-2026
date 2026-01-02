@@ -3,18 +3,11 @@ import { FaChevronDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 import React from "react";
 
-
 interface ScrollDownButtonProps {
     sections?: string[];
 }
 
-const DEFAULT_SECTIONS = [
-    '#about',
-    '#skills',
-    '#experience',
-    '#portfolio',
-    '#contact',
-];
+const DEFAULT_SECTIONS = ["#about", "#skills", "#experience", "#portfolio", "#contact"];
 
 export default function ScrollDownButton({ sections = DEFAULT_SECTIONS }: ScrollDownButtonProps) {
     const handleClick = () => {
