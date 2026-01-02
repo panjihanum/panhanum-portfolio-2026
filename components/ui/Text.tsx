@@ -1,4 +1,4 @@
-import { cn } from "./utils";
+import { cn } from "./cn";
 import { ReactNode } from "react";
 
 export function Heading({ children, className }: { children: ReactNode; className?: string }) {

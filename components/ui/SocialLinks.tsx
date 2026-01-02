@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaPhone } from "react-icons/fa";
-import { cn } from "./utils";
+import { cn } from "./cn";
 
 const socials = [
     {
